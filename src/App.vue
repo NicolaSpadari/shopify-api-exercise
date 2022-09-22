@@ -28,7 +28,14 @@
         -webkit-user-drag: none;
         @apply select-none;
     }
-    [container] {
-        @apply mx-auto;
+
+    // Transitions
+    .fade-enter-active,
+    .fade-leave-active {
+        @apply transition-opacity ease-in-out duration-300;
+    }
+    .fade-enter-from,
+    .fade-leave-to {
+        @apply opacity-0;
     }
 </style>

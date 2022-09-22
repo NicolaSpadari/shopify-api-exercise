@@ -25,14 +25,3 @@
     const { visible, closeModal } = useModal();
     const { product } = useProduct();
 </script>
-
-<style scoped>
-    .fade-enter-active,
-    .fade-leave-active {
-        @apply transition-opacity ease-in-out duration-300;
-    }
-    .fade-enter-from,
-    .fade-leave-to {
-        @apply opacity-0;
-    }
-</style>

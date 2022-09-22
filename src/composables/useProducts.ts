@@ -1,8 +1,10 @@
 const products = useSessionStorage<Product[]>("products", []);
+const loading = ref(false);
 
 const useProducts = () => {
     const setProducts = async (collection_id: number) => {
         const { setCategories } = useCategories();
+        loading.value = true;
 
         const { data } = await useFetch<Product[]>(`https://4ilk3v7wbk.execute-api.eu-west-1.amazonaws.com/dev/collections/${collection_id}/products.json`, {
             afterFetch(ctx) {
@@ -16,6 +18,7 @@ const useProducts = () => {
 
         products.value = data.value;
         setCategories(products.value);
+        loading.value = false;
     };
 
     const filteredProducts = computed(() => {
@@ -73,6 +76,7 @@ const useProducts = () => {
     });
 
     return {
+        loading,
         products,
         filteredProducts,
         setProducts
