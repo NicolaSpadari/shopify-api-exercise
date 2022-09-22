@@ -22,7 +22,7 @@
         scroll-behavior: smooth;
     }
     body {
-        @apply overflow-x-hidden font-sans min-h-200vh;
+        @apply overflow-x-hidden font-sans;
     }
     img {
         -webkit-user-drag: none;

@@ -1,5 +1,6 @@
 const collections = useSessionStorage<Collection[]>("collections", []);
 const collectionId = useSessionStorage<number>("collectionId", 0);
+const collectionName = useSessionStorage<string>("collectionName", "");
 
 const useCollections = () => {
     const setCollections = async () => {
@@ -13,15 +14,17 @@ const useCollections = () => {
         collections.value = data.value;
     };
 
-    const setCollectionId = (id: number) => {
-        collectionId.value = id;
+    const setCollection = (coll: Collection) => {
+        collectionId.value = coll.collection_id;
+        collectionName.value = coll.title;
     }
 
     return {
         collections,
         collectionId,
+        collectionName,
         setCollections,
-        setCollectionId
+        setCollection
     };
 };
 

@@ -12,8 +12,9 @@ import {
 
 export default defineConfig({
     shortcuts: [
-        ["crate", "container max-w-5xl mx-auto"],
-        ["pointer", "cursor-pointer"]
+        ["crate", "container max-w-5xl mx-auto px-5 md:px-7 lg:px-10"],
+        ["pointer", "cursor-pointer"],
+        ["size-full", "w-full h-full"]
     ],
     presets: [
         presetUno(),
@@ -30,11 +31,11 @@ export default defineConfig({
             fonts: {
                 heading: {
                     name: "Montserrat",
-                    weights: ["400", "700"]
+                    weights: ["400", "500", "700"]
                 },
                 sans: {
                     name: "DM Sans",
-                    weights: ["400", "700"]
+                    weights: ["400", "500", "700"]
                 }
             }
         })

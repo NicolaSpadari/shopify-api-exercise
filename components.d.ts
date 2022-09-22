@@ -12,6 +12,7 @@ declare module '@vue/runtime-core' {
     Modal: typeof import('./src/components/Modal.vue')['default']
     Navbar: typeof import('./src/components/Navbar.vue')['default']
     Pagination: typeof import('./src/components/Pagination.vue')['default']
+    ProductCard: typeof import('./src/components/ProductCard.vue')['default']
     Products: typeof import('./src/components/Products.vue')['default']
     Test: typeof import('./src/components/Test.vue')['default']
   }

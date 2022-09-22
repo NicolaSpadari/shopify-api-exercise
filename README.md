@@ -1,61 +1,27 @@
-### Features
+# Shopify Ecommerce exercise
 
-- ⚡️ [Vue 3](https://github.com/vuejs/vue-next), [Vite 2](https://github.com/vitejs/vite) - latest, cutting-edge techologies
+## Setup
 
-- 📂 File-based routing
+- I used Node v17.6.0. Node 14.18+ LTS or 16+ is required to run the project.
+- Clone to local
 
-- 📦 Components and composables auto importing
-
-- 📥 APIs and types auto importing
-
-- 🎨 [UnoCSS](https://github.com/unocss/unocss)
-
-- 🔥 [\<script setup\> syntax](https://github.com/vuejs/rfcs/pull/227)
-
-- 🦾 Typescript
-
-### UI Frameworks
-
-- [UnoCSS](https://github.com/unocss/unocss) (The instant on-demand atomic CSS engine)
-- [SCSS](https://sass-lang.com/)
-
-### Plugins
-
-- [Vue Router](https://github.com/vuejs/vue-router)
-- [vite-plugin-pages](https://github.com/hannoeru/vite-plugin-pages) - file system based routing
-- [unplugin-vue-components](https://github.com/antfu/unplugin-vue-components) - components auto import
-- [unplugin-auto-import](https://github.com/antfu/unplugin-vue-components) - APIs auto import
-- [vite-auto-import-resolvers](https://github.com/dishait/vite-auto-import-resolvers) - composables auto import
-- [vite-plugin-envloader](https://github.com/NicolaSpadari/vite-plugin-envloader) - inject env variables in process.env
-- [@vueuse/core](https://github.com/antfu/vueuse) - useful composition APIs
-- [@vueuse/head](https://github.com/vueuse/head) - manipulate document head reactively
-
-### Coding Style
-
-- Use Composition API with [`<script setup>` SFC syntax](https://github.com/vuejs/rfcs/pull/227)
-- [TS ESLint](https://eslint.org/) with [@antfu/eslint-config](https://github.com/antfu/eslint-config)
-
-### Clone to local
-
-```sh
-npx degit NicolaSpadari/vite-vue-template my-app
-cd my-app
 ```
-
-### Development
-
-Run and visit http://localhost:5173
-
-```sh
+npm i
 npm run dev
 ```
 
-### Build
+App will launch on `http://localhost:5137`
 
-To build, run
+## About
 
-```sh
-npm run build
-```
+- The app is built with [ViteJS](https://vitejs.dev) (the new official standard for Vue 3) + Vue 3 + composition APIs + TypeScript
+- [UnoCSS](https://github.com/unocss/unocss) is used for styling, an atomic CSS engine - similar to Tailwind but much more extendible
+- A library called [@vueuse/core](https://vueuse.org) was used to provide composable functions such as `useSessionStorage` to manage the state in a simple way
+- APIs, composables and components are auto imported with plugins such as `unplugin-auto-import` and `unplugin-vue-components`
 
-Will create the `dist` folder ready to be uploaded
+## Plugins
+
+- [unplugin-vue-components](https://github.com/antfu/unplugin-vue-components) - components auto import
+- [unplugin-auto-import](https://github.com/antfu/unplugin-vue-components) - APIs auto import
+- [vite-auto-import-resolvers](https://github.com/dishait/vite-auto-import-resolvers) - composables auto import
+- [@vueuse/core](https://github.com/antfu/vueuse) - useful composition APIs
