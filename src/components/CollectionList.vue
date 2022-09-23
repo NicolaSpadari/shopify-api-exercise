@@ -6,7 +6,7 @@
                     Shop by collection
                 </p>
 
-                <div v-show="loading" flex justify-center mt-10>
+                <div v-show="loading" flex justify-center mt-12>
                     <Loader text-blue-400 w-7 h-7 animate-spin />
                 </div>
 

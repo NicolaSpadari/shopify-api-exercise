@@ -81,13 +81,13 @@
                     <div flex>
                         <div>
                             <input id="asc" v-model="selectedDirection" hidden value="asc" type="radio" name="direction" @change="emit('choose')">
-                            <label for="asc" px-3 py-1 border rounded-l-md pointer :class="selectedDirection === 'asc' ? 'bg-blue-400 border-blue-400' : ''">
+                            <label for="asc" title="Asc" px-3 py-1 border rounded-l-md pointer :class="selectedDirection === 'asc' ? 'bg-blue-400 border-blue-400' : ''">
                                 <i-heroicons-solid-chevron-up w-4 h-4 :class="selectedDirection === 'asc' ? 'text-white' : 'text-gray-600'" />
                             </label>
                         </div>
                         <div>
                             <input id="desc" v-model="selectedDirection" hidden value="desc" type="radio" name="direction" @change="emit('choose')">
-                            <label for="desc" px-3 py-1 border rounded-r-md pointer :class="selectedDirection === 'desc' ? 'bg-blue-400 border-blue-400' : ''">
+                            <label for="desc" title="Desc" px-3 py-1 border rounded-r-md pointer :class="selectedDirection === 'desc' ? 'bg-blue-400 border-blue-400' : ''">
                                 <i-heroicons-solid-chevron-down w-4 h-4 :class="selectedDirection === 'desc' ? 'text-white' : 'text-gray-600'" />
                             </label>
                         </div>
@@ -103,7 +103,7 @@
                 <div grid grid-cols-1 gap-x-8 gap-y-10 lg="grid-cols-4">
                     <div hidden lg="block">
                         <div pb-5>
-                            <button type="button" flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover="text-gray-500" @click="collapsedCategories = !collapsedCategories">
+                            <button type="button" :title="collapsedCategories ? 'Expand' : 'Collapse'" flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover="text-gray-500" @click="collapsedCategories = !collapsedCategories">
                                 <span font-medium text-dark-800>
                                     Categories
                                     <span text-xs ml-1 text-gray-500>({{ categories.length }})</span>
