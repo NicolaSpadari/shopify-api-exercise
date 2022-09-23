@@ -9,8 +9,8 @@
                 </div>
             </div>
 
-            <div sticky top-0>
-                <span v-if="product.product_type" font-bold border border-blue-600 rounded-full tracking-wide px-3 font-medium py-1 text-xs bg-gray-100 text-blue-600 mb-8>
+            <div>
+                <span v-if="product.product_type" inline-block font-bold border border-blue-600 rounded-full tracking-wide px-3 font-medium py-1 text-xs bg-gray-100 text-blue-600 mb-8>
                     {{ product.product_type }}
                 </span>
 

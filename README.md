@@ -12,6 +12,8 @@ npm run dev
 
 App will launch on `http://localhost:5137`
 
+A live version, hosted on Netlify, is also available at https://shopify.nicolaspadari.dev
+
 ## Project structure
 
 - The app is built with [ViteJS](https://vitejs.dev) + Vue 3 + composition APIs + TypeScript
