@@ -31,7 +31,7 @@
                 </div>
 
                 <div relative mt-4>
-                    <p text-dark-800 v-html="product.html_body" />
+                    <p text-dark-800 v-html="product.body_html" />
                 </div>
 
                 <div space-y-5 mt-8>
