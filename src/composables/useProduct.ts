@@ -1,5 +1,6 @@
 import { StorageSerializers } from "@vueuse/core";
 
+// Custom state storage, supports both object-like values and null
 const product = useSessionStorage<Product>("product", null, { serializer: StorageSerializers.object });
 const loading = ref(false);
 

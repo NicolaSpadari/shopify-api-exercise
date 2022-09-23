@@ -1,15 +1,13 @@
 <template>
-    <div>
-        <Navbar />
+    <Navbar />
 
-        <Suspense>
-            <CollectionList />
-        </Suspense>
+    <Suspense>
+        <CollectionList />
+    </Suspense>
 
-        <ProductList />
+    <ProductList />
 
-        <Modal />
-    </div>
+    <Modal />
 </template>
 
 <style lang="scss">
