@@ -3,18 +3,14 @@
         <Navbar />
 
         <Suspense>
-            <Collections />
+            <CollectionList />
         </Suspense>
 
-        <Products />
+        <ProductList />
 
-        <Modal :product="product" />
+        <Modal />
     </div>
 </template>
-
-<script lang="ts" setup>
-    const { product } = useProduct();
-</script>
 
 <style lang="scss">
     html {
@@ -29,7 +25,11 @@
         @apply select-none;
     }
 
-    // Transitions
+    button:disabled{
+        @apply disabled;
+    }
+
+    // Generic transitions
     .fade-enter-active,
     .fade-leave-active {
         @apply transition-opacity ease-in-out duration-300;

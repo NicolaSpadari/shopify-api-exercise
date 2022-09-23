@@ -13,6 +13,7 @@ import {
 export default defineConfig({
     shortcuts: [
         ["crate", "container max-w-5xl mx-auto px-5 md:px-7 lg:px-10"],
+        ["disabled", "opacity-60 cursor-not-allowed"],
         ["pointer", "cursor-pointer"],
         ["size-full", "w-full h-full"]
     ],

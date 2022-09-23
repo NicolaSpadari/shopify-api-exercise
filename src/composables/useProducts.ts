@@ -10,7 +10,6 @@ const useProducts = () => {
             afterFetch(ctx) {
                 ctx.data.products.map((prod: Product) => prod.cats = prod.tags.replaceAll(", ", ",").split(","));
                 ctx.data = ctx.data.products;
-                console.log(ctx);
 
                 return ctx;
             }

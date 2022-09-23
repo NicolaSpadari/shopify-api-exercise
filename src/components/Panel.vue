@@ -1,25 +1,27 @@
 <template>
-    <div z-50 relative role="dialog">
-        <Transition name="fade">
-            <div v-show="props.open" bg="gray-800/50" inset-0 transition-opacity fixed />
-        </Transition>
+    <Teleport to="body">
+        <div z-50 relative role="dialog">
+            <Transition name="fade">
+                <div v-show="props.open" bg="gray-800/50" inset-0 transition-opacity fixed />
+            </Transition>
 
-        <div inset-0 fixed overflow-hidden :class="props.open ? '' : 'pointer-events-none'">
-            <div id="backdrop" inset-0 absolute overflow-hidden>
-                <div flex max-w-full inset-y-0 right-0 pointer-events-none fixed>
-                    <Transition name="slide">
-                        <div v-show="props.open" max-w-sm w-screen transform pointer-events-auto>
-                            <aside ref="panel" flex flex-col h-full shadow-xl>
-                                <div h-screen>
-                                    <slot />
-                                </div>
-                            </aside>
-                        </div>
-                    </Transition>
+            <div inset-0 fixed overflow-hidden :class="props.open ? '' : 'pointer-events-none'">
+                <div id="backdrop" inset-0 absolute overflow-hidden>
+                    <div flex max-w-full inset-y-0 right-0 pointer-events-none fixed>
+                        <Transition name="slide">
+                            <div v-show="props.open" max-w-sm w-screen transform pointer-events-auto>
+                                <aside ref="panel" flex flex-col h-full shadow-xl>
+                                    <div h-screen>
+                                        <slot />
+                                    </div>
+                                </aside>
+                            </div>
+                        </Transition>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </Teleport>
 </template>
 
 <script lang="ts" setup>

@@ -60,7 +60,7 @@
                         </div>
                     </div>
 
-                    <div relative inline-block>
+                    <div relative>
                         <button ref="numItems" type="button" class="group" inline-flex justify-center text-sm text-left font-medium text-dark-800 @click="collapsedItemsPerPage = !collapsedItemsPerPage">
                             Items per page: {{ itemsPerPage }}
                             <i-heroicons-solid-chevron-down w-5 h-5 ml-1 text-gray-400 />
@@ -93,7 +93,7 @@
                         </div>
                     </div>
 
-                    <button type="button" p-2 text-gray-400 ml-6 lg="hidden" @click="collapsedPanel = false">
+                    <button type="button" p-2 text-gray-400 lg="hidden" @click="collapsedPanel = false">
                         <i-heroicons-solid-funnel w-5 h-5 />
                     </button>
                 </div>
@@ -118,7 +118,7 @@
                                 <div space-y-4>
                                     <div v-for="cat in categories" :key="cat" flex items-center>
                                         <input :id="cat" v-model="selectedCategories" :value="cat" type="checkbox" :name="cat" h-4 w-4 rounded border-gray-300 text-blue-600 focus="ring-blue-500" pointer @change="emit('choose')">
-                                        <label :for="cat" ml-3 text-sm text-gray-600 pointer>{{ cat }}</label>
+                                        <label :for="cat" ml-3 text-sm text-gray-600 pointer capitalize>{{ cat }}</label>
                                     </div>
                                 </div>
                             </div>
@@ -144,10 +144,12 @@
     const ordering = ["name", "updated", "created", "published"];
 
     const sort = ref(null);
+    const numItems = ref(null);
     const collapsedCategories = ref(true);
     const collapsedSorting = ref(true);
     const collapsedItemsPerPage = ref(true);
     const collapsedPanel = ref(true);
 
-    // onClickOutside(sort, () => collapsedSorting.value = true);
+    onClickOutside(sort, () => collapsedSorting.value = true);
+    onClickOutside(numItems, () => collapsedItemsPerPage.value = true);
 </script>
